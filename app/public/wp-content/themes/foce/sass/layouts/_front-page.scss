@@ -1,5 +1,5 @@
 .banner {
-  background-image: url("./assets/images/banner.png");
+  background-image: url('./assets/images/banner.png');
   min-height: 806px;
   background-size: cover;
   display: flex;
@@ -16,7 +16,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  h2{
+  h2 {
     &::before {
       content: url('./assets/images/sunflower_leaves.png');
       position: absolute;
@@ -61,10 +61,10 @@
     display: flex;
     text-align: center;
     h3 {
-      background-image: url("./assets/images/orange_characters_bg.png");
+      background-image: url('./assets/images/orange_characters_bg.png');
     }
     div {
-      flex: 1
+      flex: 1;
     }
     .other-characters {
       display: flex;
@@ -78,12 +78,12 @@
   }
   #place {
     display: flex;
-    background-image: url("./assets/images/place_bg.png");
+    background-image: url('./assets/images/place_bg.png');
     width: 100%;
     min-height: 699px;
     background-size: cover;
     h3 {
-      background-image: url("./assets/images/orange_place_bg.png");
+      background-image: url('./assets/images/orange_place_bg.png');
       margin-bottom: -1em;
     }
     > div {
@@ -100,13 +100,12 @@
   }
 }
 
-
 #studio {
   position: relative;
   margin-top: 3em;
   h2 {
     overflow: hidden;
-    background-image: url("./assets/images/purple_studio_bg.png");
+    background-image: url('./assets/images/purple_studio_bg.png');
     &::before {
       content: url('./assets/images/random_flower.png');
       position: absolute;
@@ -132,8 +131,8 @@
       left: calc(50% - 17.225px);
       top: 40%;
     }
-    p{
-    width: 44.5%
+    p {
+      width: 44.5%;
     }
   }
 }
@@ -176,7 +175,7 @@
 
 @media all and(max-width: #{$breakpoint__small_tablet}) {
   .story {
-    h2{
+    h2 {
       &::before {
         content: '';
       }
@@ -226,10 +225,9 @@
 @media all and (max-width: #{$breakpoint__large_phone}) {
   #studio {
     h2 {
-      &::before{
+      &::before {
         content: '';
       }
     }
   }
-
 }
