@@ -167,4 +167,13 @@ h2::after,
 
 .site-footer::after {
   bottom: 40em;
+}
+
+@media screen and (max-width: 767px) {
+  #background_video {
+    display: none;
+  }
+  .site-footer::after {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */

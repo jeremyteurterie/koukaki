@@ -187,3 +187,15 @@ h2::after,
 .site-footer::after {
   bottom: 40em;
 }
+
+// version mobile
+
+@media screen and (max-width: 767px) {
+  #background_video {
+    display: none;
+  }
+
+  .site-footer::after {
+    display: none;
+  }
+}
