@@ -7,3 +7,183 @@
  Description: Thème enfant à l'ocasion de la nomination aux Oscars Shorts
  Version: 0.1
  */
+
+.story__article::after,
+h2::after,
+#studio h2::before,
+.site-footer::after,
+.site-footer::before,
+.site-footer ul::after {
+  animation: rotate-flower 10s linear infinite;
+}
+
+@keyframes rotate-flower {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* effet d'apparition des sections en fade-in */
+
+.banner {
+  animation:
+    fade-in 2s linear normal,
+    slide-in-top 2s linear normal;
+  opacity: 1;
+}
+
+.story {
+  animation:
+    fade-in 2s linear normal,
+    slide-in-bottom 2s linear normal;
+  opacity: 1;
+}
+
+#studio {
+  animation:
+    fade-in 2s linear normal,
+    slide-in-left 2s linear normal;
+  opacity: 1;
+}
+
+.section_oscars {
+  animation:
+    fade-in 2s linear normal,
+    slide-in-right 2s linear normal;
+  opacity: 1;
+}
+
+.section_oscars-image {
+  display: flex;
+  justify-content: center;
+  padding: 10rem 0 18rem 0;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-top {
+  from {
+    transform: translateY(-60px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-bottom {
+  from {
+    transform: translateY(60px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-60px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(60px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/*effet d’apparition des titres*/
+
+.title-animation {
+  opacity: 0;
+  transform: translate(0, 50%);
+  transition:
+    opacity 1.5s ease-in-out,
+    transform 1.5s ease-in-out;
+}
+
+.animated {
+  opacity: 1;
+  transform: none;
+}
+
+/* Ajout du H1 sur la vidéo */
+.banner {
+  position: relative;
+  overflow: hidden;
+}
+
+.banner img {
+  position: absolute;
+}
+
+/* Effet de flottement du H1 */
+
+@keyframes floated {
+  0% {
+    transform: translate(3%, 3%);
+  }
+  50% {
+    transform: translate(-2%, 3%);
+  }
+  75% {
+    transform: translate(3%, -2%);
+  }
+  100% {
+    transform: translate(3%, 3%);
+  }
+}
+
+/* Effet de parallaxe sur les nuages */
+.story #place {
+  background-image: url(./assets/images/Studio_Koukaki-image_place.png);
+}
+
+#place {
+  position: relative;
+}
+
+.big-cloud {
+  position: absolute;
+  top: 60px;
+  right: -200px;
+  filter: blur(15px);
+  transform: translate3d(300px, 0, 0);
+}
+
+.small-cloud {
+  position: absolute;
+  top: 200px;
+  right: 220px;
+  filter: blur(15px);
+  transform: translate3d(300px, 0, 0);
+}
+
+#background_video {
+  object-fit: contain;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
+.site-footer {
+  display: inline;
+}
+
+.site-footer::after {
+  bottom: 40em;
+}
