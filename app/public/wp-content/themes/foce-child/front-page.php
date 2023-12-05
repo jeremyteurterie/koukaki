@@ -28,8 +28,8 @@ get_header();
         <article id="characters">
             <div class="main-character">
                 <h3>Les personnages</h3>
-                <?php
-                $main_character = $characters_query->posts[0];
+                <?php get_template_part('swiper');
+                /* $main_character = $characters_query->posts[0];
                 echo '<figure>';
                 echo get_the_post_thumbnail($main_character->ID, 'full');
                 echo '<figcaption>' . $main_character->post_title . '</figcaption>';
@@ -47,7 +47,7 @@ get_header();
                     the_title();
                     echo '</figcaption>';
                     echo '</figure>';
-                }
+                } */
                 ?>
             </div>
         </article>
