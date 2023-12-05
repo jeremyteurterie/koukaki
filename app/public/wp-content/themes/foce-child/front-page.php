@@ -27,7 +27,9 @@ get_header();
         ?>
         <article id="characters">
             <div class="main-character">
-                <h3>Les personnages</h3>
+                <h3>
+                    <div class="title-animation">Les personnages</div>
+                </h3>
                 <?php get_template_part('swiper');
                 /* $main_character = $characters_query->posts[0];
                 echo '<figure>';
