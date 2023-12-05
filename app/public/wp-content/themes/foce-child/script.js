@@ -14,7 +14,7 @@ titles.forEach((title) => {
   observer.observe(title);
 });
 
-// Carrousel
+// Swiper
 var swiper = new Swiper('.mySwiper', {
   effect: 'coverflow',
   grabCursor: true,
@@ -55,42 +55,15 @@ window.addEventListener('scroll', function () {
   title.style.transform = `translate3d(0, ${scrollPosition * -0.5}px, 0)`;
 });
 
-// changement du menu burger en croix au clic et animation des titres du menu
-const burger = document.querySelector('.burger');
-const titlesNav = document.querySelectorAll('.menu li ');
+// Menu burger
+
+const burger = document.querySelector('.burger-button');
+const nav = document.querySelector('.burger-menu');
 
 burger.addEventListener('click', () => {
-  burger.classList.toggle('active'); // ajout de la class active au clic de la div Burger
-
-  if (burger.classList.contains('active')) {
-    setTimeout(() => {
-      titlesNav.forEach((title) => {
-        // parcourt tous les titres du menu nav
-        title.classList.add('animated'); // ajout de la class animated à chaque titre
-      });
-    }, '500'); // l'animation des titres est réalisée après 0,5 seconde
-  } else {
-    titlesNav.forEach((title) => {
-      title.classList.remove('animated');
-    });
-  }
+  burger.classList.toggle('active');
 });
 
-// pour que le burger affiche le menu au clic
-document.querySelector('.menu-toggle').addEventListener('click', function () {
-  document.querySelector('.menu').classList.toggle('is-active');
-  console.log('is-active');
-});
-
-// pour que le menu soit caché au clic des titres
-const navLinks = document.querySelectorAll('.menu li');
-
-navLinks.forEach((link) => {
-  link.addEventListener('click', () => {
-    document.querySelector('.menu').classList.remove('is-active');
-    burger.classList.remove('active');
-    titlesNav.forEach((title) => {
-      title.classList.remove('animated');
-    });
-  });
+burger.addEventListener('click', () => {
+  nav.classList.toggle('open');
 });
