@@ -5,14 +5,11 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.classList.add('animated');
-      return;
     }
   });
 });
 
-titles.forEach((title) => {
-  observer.observe(title);
-});
+titles.forEach((title) => observer.observe(title));
 
 // Swiper
 var swiper = new Swiper('.mySwiper', {
@@ -36,34 +33,26 @@ var swiper = new Swiper('.mySwiper', {
 });
 
 // effet de parallaxe sur les nuages
+function parallaxTransform(element, scrollFactor) {
+  const scrollPosition = window.pageYOffset;
+  element.style.transform = `translate3d(${
+    scrollPosition * scrollFactor
+  }px, 0, 0)`;
+}
+
 const bigCloud = document.querySelector('.big-cloud');
 const smallCloud = document.querySelector('.small-cloud');
 
 window.addEventListener('scroll', function () {
-  const scrollPosition = window.pageYOffset;
-  bigCloud.style.transform = `translate3d(${scrollPosition * -0.2}px, 0, 0)`;
-  smallCloud.style.transform = `translate3d(${scrollPosition * -0.2}px, 0, 0)`;
-});
-
-// effet de parallaxe sur la vidéo et le titre du header
-const video = document.querySelector('#background-video');
-const title = document.querySelector('.title-animation');
-
-window.addEventListener('scroll', function () {
-  const scrollPosition = window.pageYOffset;
-  video.style.transform = `translate3d(0, ${scrollPosition * 0.2}px, 0)`;
-  title.style.transform = `translate3d(0, ${scrollPosition * -0.5}px, 0)`;
+  parallaxTransform(bigCloud, -0.2);
+  parallaxTransform(smallCloud, -0.2);
 });
 
 // Menu burger
-
 const burger = document.querySelector('.burger-button');
 const nav = document.querySelector('.burger-menu');
 
 burger.addEventListener('click', () => {
   burger.classList.toggle('active');
-});
-
-burger.addEventListener('click', () => {
   nav.classList.toggle('open');
 });

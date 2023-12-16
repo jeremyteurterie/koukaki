@@ -68,7 +68,6 @@ h2::after,
 }
 
 /* effet d'apparition des sections en fade-in */
-
 .banner {
   animation:
     fade-in 2s linear normal,
@@ -174,7 +173,6 @@ h2::after,
 }
 
 /* Effet de flottement du H1 */
-
 @keyframes floated {
   0% {
     transform: translate(3%, 3%);
@@ -230,7 +228,6 @@ h2::after,
 }
 
 // version mobile
-
 @media screen and (max-width: 767px) {
   #background_video {
     display: none;
@@ -242,7 +239,6 @@ h2::after,
 }
 
 /* Menu burger  */
-
 .main-navigation {
   display: flex;
   justify-content: center;
@@ -250,7 +246,6 @@ h2::after,
 }
 
 .burger-menu {
-  /* height: 80px; */
   background-color: #ffd5a2;
   width: 100%;
   position: absolute;
@@ -319,7 +314,6 @@ h2::after,
 }
 
 /* Icone Burger  */
-
 .burger-button {
   width: 42px;
   height: 24px;
@@ -402,7 +396,6 @@ h2::after,
 }
 
 /* Placement des images dans le menu burger  */
-
 .fleurblanchemenu {
   content: url('assets/images/sunflower-burger.png');
   position: absolute;
